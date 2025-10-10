@@ -1,0 +1,49 @@
+package lab3;
+
+import java.util.Scanner;
+
+public class CommissionCalculator {
+	private AutoPolicy auto;
+	private HomePolicy home;
+	private LifePolicy life;
+	
+	public CommissionCalculator() {
+		auto = new AutoPolicy("A001", "Name Auto", 0.0, 0.0, 0.0);
+		home = new HomePolicy("H001", "Name Home", 0.0, 0.0, 0.0, 0.0);
+		life = new LifePolicy("L001", "Name Life", 0.0, 0, 0.0);
+	}
+	
+	public void run() {
+		Scanner input = new Scanner(System.in);
+		int choice;
+		
+		do {
+			System.out.println("-----------------------------");
+			System.out.println("Welcome to Parkland Insurance");
+			System.out.println("-----------------------------");
+			System.out.println("1) Enter auto insurance policy information");
+			System.out.println("2) Enter home insurance policy information");
+			System.out.println("3) Enter life insurance policy information");
+			System.out.println("4) Compute commission and print auto policy");
+			System.out.println("5) Compute commission and print home policy");
+			System.out.println("6) Compute commission and print life policy");
+			System.out.println("7) Quit");
+			
+			choice = Integer.parseInt(input.nextLine());
+			
+			switch (choice) {
+				case 1: auto.enterPolicyInfo(input); break;
+				case 2: home.enterPolicyInfo(input); break;
+				case 3: life.enterPolicyInfo(input); break;
+				case 4: auto.printPolicy(); break;
+				case 5: home.printPolicy(); break;
+				case 6: life.printPolicy(); break;
+				case 7: System.out.println("Thank you. Bye!"); break;
+				default: System.out.println("invalid choice. Try again.");
+			}
+		}while (choice != 7);
+		
+		input.close();
+	}
+	
+}
