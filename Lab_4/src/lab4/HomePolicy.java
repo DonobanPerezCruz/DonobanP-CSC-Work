@@ -1,0 +1,50 @@
+package lab4;
+
+import java.util.Scanner;
+
+public class HomePolicy extends Policy {
+	private double dwelling;
+	private double contents;
+	private double liability;
+	
+	public HomePolicy(String policyNumber, String policyHolderName, double premiumAmount, double dwelling, double contents, double liability) {
+		super(policyNumber, policyHolderName, premiumAmount);
+		this.dwelling = dwelling;
+		this.contents = contents;
+		this.liability = liability;
+	}
+	
+	 public void enterPolicyInfo(Scanner input) {
+		 System.out.print("Enter policy number: ");
+	     policyNumber = input.nextLine();
+
+	     System.out.print("Enter policy holder name: ");
+	     policyHolderName = input.nextLine();
+
+	     System.out.print("Enter premium amount: ");
+	        premiumAmount = Double.parseDouble(input.nextLine());
+
+	     System.out.print("Enter dwelling coverage amount: ");
+	     dwelling = Double.parseDouble(input.nextLine());
+
+	     System.out.print("Enter contents coverage amount: ");
+	     contents = Double.parseDouble(input.nextLine());
+	     
+	     System.out.print("Enter liability coverage amount: ");
+	     liability = Double.parseDouble(input.nextLine());
+	 }
+	 public String toString() {
+			return "Auto policy\n-----------\n" + 
+					"Policy Number: " + policyNumber + "\n" +
+					"Policy Holder: " + policyHolderName + "\n" +
+					String.format("Premium Amount: $%.2f\n", premiumAmount) +
+					String.format("Dwelling: $%.2f\n",  dwelling) +
+					String.format("Contents: $%.2f\n", contents) +
+					String.format("Liability: $%.2f\n", liability) +
+		            String.format("Commission: $%.2f\n", computeCommission());
+	 }
+	
+	public double computeCommission() {
+		return (dwelling + contents + liability) * 0.2;
+	}
+}
