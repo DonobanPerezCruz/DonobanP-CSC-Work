@@ -26,7 +26,7 @@ public class AutoPolicy extends Policy {
 		liability =  Double.parseDouble(input.nextLine());
 		
 		System.out.print("enter collision coverage: ");
-		liability = Double.parseDouble(input.nextLine());
+		collision = Double.parseDouble(input.nextLine());
 		
 	}
 	
@@ -43,3 +43,4 @@ public class AutoPolicy extends Policy {
 		return 0.24 * liability + 0.6 * collision;
 	}
 }
+
