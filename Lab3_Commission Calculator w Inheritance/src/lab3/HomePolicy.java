@@ -45,6 +45,7 @@ public class HomePolicy extends Policy {
 	}
 
 	public double computeCommission() {
-		return (dwelling + contents + liability) * 0.2;
+		return (liability * 0.30) + ((dwelling + contents) * 0.20);
 	}
 }
+
