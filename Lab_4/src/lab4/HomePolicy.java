@@ -10,6 +10,7 @@ public class HomePolicy extends Policy {
 	
 	public HomePolicy(String policyNumber, String policyHolderName, int footage, double premiumAmount, double dwelling, double contents, double liability) {
 		super(policyNumber, policyHolderName, premiumAmount);
+		this.footage = footage;
 		this.dwelling = dwelling;
 		this.contents = contents;
 		this.liability = liability;
@@ -38,7 +39,7 @@ public class HomePolicy extends Policy {
 	     liability = Double.parseDouble(input.nextLine());
 	 }
 	 public String toString() {
-			return "Auto policy\n-----------\n" + 
+			return "home policy\n-----------\n" + 
 					"Policy Number: " + policyNumber + "\n" +
 					"Policy Holder: " + policyHolderName + "\n" +
 					String.format("Premium Amount: $%.2f\n", premiumAmount) +
@@ -53,5 +54,6 @@ public class HomePolicy extends Policy {
 		return (liability * 0.30) + ((dwelling + contents) * 0.20);
 	}
 }
+
 
 
