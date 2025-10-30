@@ -9,7 +9,7 @@ public class CommissionCalculator {
 	
 	public CommissionCalculator() {
 		auto = new AutoPolicy("A001", "Name Auto", 0.0, 0.0, 0.0);
-		home = new HomePolicy("H001", "Name Home", 0.0, 0.0, 0.0, 0.0);
+		home = new HomePolicy("H001", "Name Home", 0, 0.0, 0.0, 0.0, 0.0);
 		life = new LifePolicy("L001", "Name Life", 0.0, 0, 0.0);
 	}
 	
@@ -47,3 +47,4 @@ public class CommissionCalculator {
 	}
 	
 }
+
