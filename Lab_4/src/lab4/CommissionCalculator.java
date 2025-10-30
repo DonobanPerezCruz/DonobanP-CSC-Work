@@ -35,7 +35,7 @@ public class CommissionCalculator {
 				policies.add(auto);
 				break;
 			case 2:
-				HomePolicy home = new HomePolicy("", "", 0.0, 0.0, 0.0, 0.0);
+				HomePolicy home = new HomePolicy("", "", 0, 0.0, 0.0, 0.0, 0.0);
 				home.enterPolicyInfo(input);
 				policies.add(home);
 				break;
@@ -46,7 +46,6 @@ public class CommissionCalculator {
 				break;
 			case 4:
 				for (Policy policy : policies) {
-					policy.computeCommission();
 					System.out.println(policy);
 					System.out.println("-----------------------------");
 				}
@@ -59,4 +58,5 @@ public class CommissionCalculator {
 		input.close();
 	}
 }
+
 			
