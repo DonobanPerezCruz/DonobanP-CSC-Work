@@ -42,7 +42,8 @@ public class AutoPolicy extends Policy {
 		
 	
 	public double computeCommission() {
-		return 0.24 * liability + 0.6 * collision;
+		return (liability + collision) * 0.30;
 	}
 }
+
 
