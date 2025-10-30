@@ -19,7 +19,7 @@ public class Life {
 	}
 	
 	public double computeCommission() {
-		return 0.2 * term;
+		return term * 0.20;
 	}
 	
 	public void printPolicy() {
@@ -27,3 +27,4 @@ public class Life {
 				firstName, lastName, age, term, computeCommission());
 	}
 }
+
