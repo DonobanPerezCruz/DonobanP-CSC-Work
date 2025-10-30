@@ -22,7 +22,7 @@ public class Auto {
 	}
 	
 	public double computeCommission() {
-		return 0.24 * liability + 0.6 * collision;
+		return (liability + collission) * 0.30;
 	}
 	
 	public void printPolicy() {
@@ -31,4 +31,5 @@ public class Auto {
 	
 	}
 }
+
 
