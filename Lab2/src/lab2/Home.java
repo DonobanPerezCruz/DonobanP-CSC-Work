@@ -24,7 +24,7 @@ public class Home {
 	}
 	
 	public double computeCommission() {
-		return (liability * 0.30) + ((dwelling + contents) * 0.20
+		return (liability * 0.30) + ((dwelling + contents) * 0.20);
 	}
 	
 	public void printPolicy() {
@@ -35,4 +35,5 @@ public class Home {
 		
 	}
 }
+
 
