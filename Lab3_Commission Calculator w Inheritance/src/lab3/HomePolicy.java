@@ -10,7 +10,7 @@ public class HomePolicy extends Policy {
 	
 	public HomePolicy(String policyNumber, String policyHolderName, double premiumAmount, int footage, double dwelling, double contents, double liability) {
 		super(policyNumber, policyHolderName, premiumAmount);
-		this.footage = footage
+		this.footage = footage;
 		this.dwelling = dwelling;
 		this.contents = contents;
 		this.liability = liability;
@@ -54,5 +54,6 @@ public class HomePolicy extends Policy {
 		return (liability * 0.30) + ((dwelling + contents) * 0.20);
 	}
 }
+
 
 
