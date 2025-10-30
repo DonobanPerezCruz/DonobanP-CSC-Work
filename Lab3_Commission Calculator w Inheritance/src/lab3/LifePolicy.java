@@ -36,7 +36,8 @@ public class LifePolicy extends Policy {
 	}
 	
 	public double computeCommission() {
-		return term * 0.2;
+		return term * 0.20;
 	}
 
 }
+
