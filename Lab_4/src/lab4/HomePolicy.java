@@ -3,11 +3,12 @@ package lab4;
 import java.util.Scanner;
 
 public class HomePolicy extends Policy {
+	private int footage;
 	private double dwelling;
 	private double contents;
 	private double liability;
 	
-	public HomePolicy(String policyNumber, String policyHolderName, double premiumAmount, double dwelling, double contents, double liability) {
+	public HomePolicy(String policyNumber, String policyHolderName, int footage, double premiumAmount, double dwelling, double contents, double liability) {
 		super(policyNumber, policyHolderName, premiumAmount);
 		this.dwelling = dwelling;
 		this.contents = contents;
@@ -24,6 +25,9 @@ public class HomePolicy extends Policy {
 	     System.out.print("Enter premium amount: ");
 	        premiumAmount = Double.parseDouble(input.nextLine());
 
+		 System.out.print("Enter house square footage: ");
+        footage = Integer.parseInt(input.nextLine());
+
 	     System.out.print("Enter dwelling coverage amount: ");
 	     dwelling = Double.parseDouble(input.nextLine());
 
@@ -38,6 +42,7 @@ public class HomePolicy extends Policy {
 					"Policy Number: " + policyNumber + "\n" +
 					"Policy Holder: " + policyHolderName + "\n" +
 					String.format("Premium Amount: $%.2f\n", premiumAmount) +
+					"Footage: " + footage + "\n" +
 					String.format("Dwelling: $%.2f\n",  dwelling) +
 					String.format("Contents: $%.2f\n", contents) +
 					String.format("Liability: $%.2f\n", liability) +
@@ -48,4 +53,5 @@ public class HomePolicy extends Policy {
 		return (liability * 0.30) + ((dwelling + contents) * 0.20);
 	}
 }
+
 
